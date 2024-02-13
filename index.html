@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valetine Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ff8c9d;
+        }
+
+        .book {
+            position: relative;
+            border-radius: 10px;
+            width: 300px;
+            height: 400px;
+
+            background-image: url('');
+            background-size: cover;
+            background-position: center;
+            background-size: 97%;
+            box-shadow: 1px 1px 12px black;
+            transform-style: preserve-3d;
+            perspective: 2000px;
+            transition: all .5s;
+        }
+
+        .book:hover {
+            rotate: -10deg;
+
+        }
+
+        .cover {
+            top: 0;
+            z-index: 11111;
+            position: absolute;
+            background-color: lightgray;
+
+            background-image: linear-gradient(40deg, rgb(253, 81, 110), rgb(53, 8, 51));
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+            -webkit-transform-origin: 0;
+            -ms-transform-origin: 0;
+            transform-origin: 0;
+            box-shadow: 1px 1px 12px black;
+        }
+
+        .book:hover .cover {
+            -webkit-transition: all .5s;
+            transition: all .5s;
+            transform: rotatey(-120deg);
+        }
+
+        .heart {
+            position: relative;
+            top: 0px;
+            margin: auto;
+            width: 140px;
+            height: 140px;
+        }
+
+        .heart img {
+            height: 100%;
+            width: 100%;
+            animation: .8s beat infinite;
+        }
+
+        @keyframes beat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .notes {
+            font-family: "Protest Riot", sans-serif;
+            font-size: 44px;
+            color: rgb(190, 46, 46);
+        }
+
+        .notes::before {
+            content: "Happy";
+            top: 30px;
+            color: #d04e4e;
+            font-family: "Protest Riot", sans-serif;
+        }
+
+        .notes::after {
+            content: "Day!";
+            color: #d04e4e;
+            top: 60px;
+            font-family: "Protest Riot", sans-serif;
+        }
+
+        .back {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(180, 52, 73);
+            border-radius: 10px;
+        }
+
+        .post {
+
+            height: 150px;
+            width: 140px;
+        }
+
+        .ballon1 {
+            position: absolute;
+            z-index: 1;
+            top: 140px;
+            height: 120px;
+            width: 70px;
+            left: 170px;
+        }
+        .ballon2 {
+            position: absolute;
+            z-index: 4;
+            top: 140px;
+            height: 120px;
+            width: 70px;
+        }
+
+        .wave {
+            float: left;
+            margin: 20px;
+            transform-origin: center -36px;
+        }
+        .wave img {
+            border: 5px solid #f8f8f8;
+            display: block;
+        }
+
+        .imgbox{
+            position: relative;
+           
+        }
+        .wave:nth-child(1) img{
+            top: 20px;
+            left: 30px;
+            rotate: -5deg;
+            width: 110px;
+            height: 150px;
+        }
+        .wave:nth-child(2) img{
+            left: 100px;
+            rotate: 10deg;
+            width: 110px;
+            height: 150px;
+        }
+        .wave:nth-child(3) img{
+            position: relative;
+            z-index: 2;
+            top: -40px;
+            width: 150px;
+            height: 220px;
+            rotate: -90deg;
+            left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="book">
+            <div class="cover">
+                <br>
+                <div class="notes"><br>Valentine's<br /></div>
+                <div class="heart">
+                    <img src="heart.png" alt="">
+                </div>
+            </div>
+            <div class="back">
+                <img src="ballon.png" alt="" class="ballon1">
+                <img src="ballon.png" alt="" class="ballon2">
+                <div class="imgbox">
+                    <figure class="wave">
+                        <img src="divya1.jpg"
+                            alt="rajni"></img>
+
+                    </figure>
+
+                    <figure class="wave">
+                        <img src="divya2.jpg"
+                            alt="chuck"></img>
+                    </figure>
+
+                    <figure class="wave">
+                        <img src="divya3.jpg"
+                            alt="bean"></img>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
